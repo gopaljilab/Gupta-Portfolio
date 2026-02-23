@@ -82,9 +82,15 @@ export function Projects() {
             </div>
             
             <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
+              <p className="text-xs font-medium text-primary/80 mb-3">
+                {project.title === "Om Restaurant" ? "Java, Spring Boot, MySQL, HTML, CSS" :
+                 project.title === "Portfolio Website" ? "React, Tailwind CSS, Framer Motion" :
+                 project.title === "Wash'n Vibe" ? "UI/UX Prototype, Figma" :
+                 project.title === "CryptoraHub" ? "Web3, Blockchain UI" : ""}
+              </p>
               <p className="text-muted-foreground mb-6 line-clamp-2">
                 {project.description}
               </p>

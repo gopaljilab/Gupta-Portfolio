@@ -50,7 +50,8 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="lg:w-5/12"
         >
-          <h3 className="text-3xl font-display font-bold mb-6">Let's build something awesome together.</h3>
+          <h3 className="text-3xl font-display font-bold mb-2">Let's build something awesome together.</h3>
+          <p className="text-primary font-medium mb-6">Open to internships, entry-level roles, and open-source opportunities.</p>
           <p className="text-muted-foreground mb-10 text-lg">
             I'm currently available for freelance work and full-time opportunities. If you have a project that needs some creative juice, hit me up!
           </p>

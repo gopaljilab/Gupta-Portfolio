@@ -1,0 +1,127 @@
+Edit the existing portfolio web app only.
+Do NOT change the UI layout, colors, spacing, animations, or component structure.
+Apply the following content-level improvements and bug fixes to make the portfolio more recruiter-friendly and remove duplication issues.
+
+1️⃣ Hero Section – Improve Value Statement
+
+Replace the current introduction paragraph with:
+
+“I build scalable Java full-stack applications using Spring Boot, React, and SQL, with hands-on experience in open-source collaboration and real-world projects.”
+
+Keep the heading “Hi, I’m Gopal Gupta” unchanged, clearly visible, and high-contrast.
+
+2️⃣ Stats Section – Sharpen Labels (Numbers Stay the Same)
+
+Update labels only:
+
+“Completed Projects” → “Full-Stack Projects”
+
+“Years of Experience” → “Hands-on Experience”
+
+“Open Source Contributions” → “Open-Source Contributions”
+
+“Technical Skills” → “Core Technologies”
+
+Do not change the numbers or their styling.
+
+3️⃣ REMOVE DUPLICATED STATS (IMPORTANT)
+
+Ensure ONLY ONE stats section exists across the entire site.
+
+Keep the stats section that displays numbers + labels together:
+
+5+ Full-Stack Projects
+
+1+ Hands-on Experience
+
+3+ Open-Source Contributions
+
+10+ Core Technologies
+
+Completely remove or comment out any duplicate labels-only section that displays:
+
+“COMPLETED PROJECTS”
+
+“YEARS OF EXPERIENCE”
+
+“OPEN SOURCE CONTRIBUTIONS”
+
+“TECHNICAL SKILLS”
+
+The stats section must appear once, directly below the hero description and location, and nowhere else.
+
+4️⃣ Work Experience – Improve Impact (No New Roles)
+
+Rewrite descriptions to be impact-oriented while keeping:
+
+Company names
+
+Roles
+
+Dates
+
+Example rewrite for open-source roles:
+
+“Contributed to open-source Java and web projects by fixing bugs, improving code quality, and collaborating with distributed teams through GitHub.”
+
+5️⃣ Projects Section – Add Tech Stack Visibility
+
+Under each project title, add a single-line tech stack in smaller text.
+
+Examples:
+
+Om Restaurant → Java, Spring Boot, MySQL, HTML, CSS
+
+Portfolio Website → React, Tailwind CSS, Framer Motion
+
+Wash’n Vibe → UI/UX Prototype, Figma
+
+CryptoraHub → Web3, Blockchain UI
+
+Do not change project images, cards, or layout.
+
+6️⃣ Skills Section – Reorder Only
+
+Reorder skills into the following priority:
+
+Java
+
+Spring Boot
+
+SQL / MySQL
+
+React
+
+JavaScript
+
+HTML / CSS
+
+AWS
+
+Docker
+
+Git / GitHub
+
+Figma
+
+Keep all existing skills and icons.
+
+7️⃣ Contact Section – Add Call to Action
+
+Add one line above the contact form:
+
+“Open to internships, entry-level roles, and open-source opportunities.”
+
+8️⃣ Global Constraints (Strict)
+
+No redesign
+
+No new sections
+
+No color, font, spacing, or animation changes
+
+Do not change numbers
+
+Maintain full responsiveness
+
+Apply all changes cleanly to the existing codebase and ensure stats render exactly once.

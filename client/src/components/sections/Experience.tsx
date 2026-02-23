@@ -1,8 +1,22 @@
 import { motion } from "framer-motion";
-import { Briefcase, Database, Coffee } from "lucide-react";
+import { Briefcase, Database, Coffee, Globe, Code } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const experiences = [
+  {
+    role: "Open Source Contributor",
+    company: "Elite Coders",
+    period: "Present",
+    description: "Actively contributing to open-source repositories, improving code quality, and participating in community-driven development.",
+    icon: Code,
+  },
+  {
+    role: "Open Source Contributor",
+    company: "Social Winter of Code",
+    period: "Nov 2025 – Jan 2026",
+    description: "Contributed to open-source projects, fixed bugs, and collaborated with developers in a remote environment.",
+    icon: Globe,
+  },
   {
     role: "SQL Intern",
     company: "NativeSoftTech",

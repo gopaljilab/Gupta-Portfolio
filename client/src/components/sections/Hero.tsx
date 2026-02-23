@@ -64,11 +64,11 @@ export function Hero() {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Gopal Gupta</span>
+              Hi, I'm <span className="text-white">Gopal Gupta</span>
             </h1>
             
             <h2 className="text-2xl md:text-3xl font-display text-primary mb-6 text-glow">
-              Java Full-Stack & UI/UX Designer
+              Java Full-Stack Developer | Open Source Contributor
             </h2>
             
             <p className="text-lg text-muted-foreground mb-4 max-w-xl mx-auto md:mx-0">

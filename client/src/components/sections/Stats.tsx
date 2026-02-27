@@ -21,7 +21,7 @@ export function Stats() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center px-4"
             >
-              <h3 className="text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-white/40 mb-2">
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-[#00ff88] mb-2 drop-shadow-[0_0_10px_rgba(0,255,136,0.3)]">
                 {stat.value}
               </h3>
               <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">

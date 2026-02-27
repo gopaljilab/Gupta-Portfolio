@@ -30,7 +30,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-full md:w-5/12 flex justify-center md:justify-start order-1 md:order-2"
+            className="w-full md:w-5/12 flex justify-center md:justify-start order-1 md:order-2 md:translate-x-6"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent rounded-full blur-2xl"></div>
@@ -112,13 +112,29 @@ export function Hero() {
 
             {/* SOCIAL LINKS */}
             <div className="flex items-center justify-center md:justify-start gap-4 mt-10">
-              <a className="w-10 h-10 rounded-full bg-card border border-white/5 flex items-center justify-center hover:text-primary transition-all">
+              <a 
+                href="https://github.com/gopaljilab" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-card border border-white/10 flex items-center justify-center hover:text-primary hover:border-primary/50 transition-all"
+                aria-label="GitHub Profile"
+              >
                 <Github className="w-5 h-5" />
               </a>
-              <a className="w-10 h-10 rounded-full bg-card border border-white/5 flex items-center justify-center hover:text-primary transition-all">
+              <a 
+                href="https://www.linkedin.com/in/guptagopal001/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-card border border-white/10 flex items-center justify-center hover:text-primary hover:border-primary/50 transition-all"
+                aria-label="LinkedIn Profile"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a className="w-10 h-10 rounded-full bg-card border border-white/5 flex items-center justify-center hover:text-primary transition-all">
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-card border border-white/10 flex items-center justify-center hover:text-primary hover:border-primary/50 transition-all"
+                aria-label="Twitter Profile"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
             </div>

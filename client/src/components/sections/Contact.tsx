@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, MapPin, Send, Loader2, Github, Linkedin } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -50,9 +50,9 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="lg:w-5/12"
         >
-          <h3 className="text-3xl font-display font-bold mb-2">Let's build something awesome together.</h3>
-          <p className="text-primary font-medium mb-6">Open to internships, entry-level roles, and open-source opportunities.</p>
-          <p className="text-muted-foreground mb-10 text-lg">
+          <h3 className="text-3xl font-display font-bold mb-2 text-white">Let's build something awesome together.</h3>
+          <p className="text-primary font-semibold mb-6">Open to internships, entry-level roles, and open-source opportunities.</p>
+          <p className="text-muted-foreground/90 mb-10 text-lg leading-relaxed">
             I'm currently available for freelance work and full-time opportunities. If you have a project that needs some creative juice, hit me up!
           </p>
 
@@ -62,8 +62,8 @@ export function Contact() {
                 <Mail className="w-5 h-5 text-primary group-hover:text-black transition-colors" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground font-medium mb-1">Email</p>
-                <a href="mailto:gopaljilab@gmail.com" className="text-lg font-semibold hover:text-primary transition-colors">
+                <p className="text-sm text-muted-foreground font-semibold mb-1 uppercase tracking-wider">Email</p>
+                <a href="mailto:gopaljilab@gmail.com" className="text-lg font-bold text-white hover:text-primary transition-colors">
                   gopaljilab@gmail.com
                 </a>
               </div>
@@ -74,10 +74,32 @@ export function Contact() {
                 <MapPin className="w-5 h-5 text-primary group-hover:text-black transition-colors" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground font-medium mb-1">Location</p>
-                <p className="text-lg font-semibold">Bengaluru, Karnataka, India</p>
+                <p className="text-sm text-muted-foreground font-semibold mb-1 uppercase tracking-wider">Location</p>
+                <p className="text-lg font-bold text-white">Bengaluru, Karnataka, India</p>
               </div>
             </div>
+          </div>
+          
+          {/* Added Social Links to Contact Section */}
+          <div className="flex items-center gap-4 mt-12">
+            <a 
+              href="https://github.com/gopaljilab" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-card border border-white/10 flex items-center justify-center hover:text-primary hover:border-primary/50 transition-all text-muted-foreground"
+              aria-label="GitHub Profile"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/guptagopal001/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-card border border-white/10 flex items-center justify-center hover:text-primary hover:border-primary/50 transition-all text-muted-foreground"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
           </div>
         </motion.div>
 
@@ -96,43 +118,43 @@ export function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-muted-foreground pl-1">Your Name</label>
+                  <label className="text-sm font-semibold text-muted-foreground pl-1">Your Name</label>
                   <Input 
                     {...register("name")} 
                     placeholder="John Doe"
-                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl"
+                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
                   />
-                  {errors.name && <p className="text-destructive text-sm pl-1">{errors.name.message}</p>}
+                  {errors.name && <p className="text-destructive text-sm pl-1 font-medium">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-muted-foreground pl-1">Your Email</label>
+                  <label className="text-sm font-semibold text-muted-foreground pl-1">Your Email</label>
                   <Input 
                     {...register("email")} 
                     type="email"
                     placeholder="john@example.com"
-                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl"
+                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
                   />
-                  {errors.email && <p className="text-destructive text-sm pl-1">{errors.email.message}</p>}
+                  {errors.email && <p className="text-destructive text-sm pl-1 font-medium">{errors.email.message}</p>}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-muted-foreground pl-1">Phone Number (Optional)</label>
+                <label className="text-sm font-semibold text-muted-foreground pl-1">Phone Number (Optional)</label>
                 <Input 
                   {...register("phone")} 
                   placeholder="+91 98765 43210"
-                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl"
+                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-muted-foreground pl-1">Message</label>
+                <label className="text-sm font-semibold text-muted-foreground pl-1">Message</label>
                 <Textarea 
                   {...register("message")} 
                   placeholder="Tell me about your project..."
-                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[150px] rounded-xl resize-none"
+                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[150px] rounded-xl resize-none placeholder:text-muted-foreground/60 text-white"
                 />
-                {errors.message && <p className="text-destructive text-sm pl-1">{errors.message.message}</p>}
+                {errors.message && <p className="text-destructive text-sm pl-1 font-medium">{errors.message.message}</p>}
               </div>
 
               <Button 

@@ -7,9 +7,10 @@ export function Hero() {
   const { toast } = useToast();
 
   const handleDownloadCV = () => {
+    window.open("/resume.pdf", "_blank");
     toast({
-      title: "Downloading CV",
-      description: "Gopal's resume is being downloaded...",
+      title: "Opening Resume",
+      description: "Gopal's resume is opening in a new tab.",
     });
   };
 

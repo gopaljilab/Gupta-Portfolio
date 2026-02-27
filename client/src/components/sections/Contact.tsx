@@ -50,31 +50,31 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="lg:w-5/12"
         >
-          <h3 className="text-3xl font-display font-bold mb-2 text-white">Let's build something awesome together.</h3>
-          <p className="text-primary font-semibold mb-6">Open to internships, entry-level roles, and open-source opportunities.</p>
-          <p className="text-muted-foreground/90 mb-10 text-lg leading-relaxed">
+          <h3 className="text-3xl font-display font-bold mb-2 text-white drop-shadow-sm">Let's build something awesome together.</h3>
+          <p className="text-primary font-bold mb-6 brightness-125">Open to internships, entry-level roles, and open-source opportunities.</p>
+          <p className="text-white/90 mb-10 text-lg leading-relaxed font-medium">
             I'm currently available for freelance work and full-time opportunities. If you have a project that needs some creative juice, hit me up!
           </p>
 
           <div className="space-y-6">
             <div className="flex items-start gap-4 p-4 rounded-2xl glass-panel group hover:border-primary/30 transition-colors">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
+              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <Mail className="w-5 h-5 text-primary group-hover:text-black transition-colors" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground font-semibold mb-1 uppercase tracking-wider">Email</p>
-                <a href="mailto:gopaljilab@gmail.com" className="text-lg font-bold text-white hover:text-primary transition-colors">
+                <p className="text-sm text-primary font-bold mb-1 uppercase tracking-wider brightness-110">Email</p>
+                <a href="mailto:gopaljilab@gmail.com" className="text-lg font-bold text-white hover:text-primary transition-colors decoration-primary underline-offset-4 hover:underline">
                   gopaljilab@gmail.com
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-2xl glass-panel group hover:border-primary/30 transition-colors">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
+              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <MapPin className="w-5 h-5 text-primary group-hover:text-black transition-colors" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground font-semibold mb-1 uppercase tracking-wider">Location</p>
+                <p className="text-sm text-primary font-bold mb-1 uppercase tracking-wider brightness-110">Location</p>
                 <p className="text-lg font-bold text-white">Bengaluru, Karnataka, India</p>
               </div>
             </div>
@@ -118,43 +118,43 @@ export function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-muted-foreground pl-1">Your Name</label>
+                  <label className="text-sm font-bold text-white/80 pl-1">Your Name</label>
                   <Input 
                     {...register("name")} 
                     placeholder="John Doe"
-                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
+                    className="bg-black/70 border-white/20 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-white/50 text-white font-medium shadow-inner"
                   />
-                  {errors.name && <p className="text-destructive text-sm pl-1 font-medium">{errors.name.message}</p>}
+                  {errors.name && <p className="text-red-400 text-sm pl-1 font-bold">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-muted-foreground pl-1">Your Email</label>
+                  <label className="text-sm font-bold text-white/80 pl-1">Your Email</label>
                   <Input 
                     {...register("email")} 
                     type="email"
                     placeholder="john@example.com"
-                    className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
+                    className="bg-black/70 border-white/20 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-white/50 text-white font-medium shadow-inner"
                   />
-                  {errors.email && <p className="text-destructive text-sm pl-1 font-medium">{errors.email.message}</p>}
+                  {errors.email && <p className="text-red-400 text-sm pl-1 font-bold">{errors.email.message}</p>}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-muted-foreground pl-1">Phone Number (Optional)</label>
+                <label className="text-sm font-bold text-white/80 pl-1">Phone Number (Optional)</label>
                 <Input 
                   {...register("phone")} 
                   placeholder="+91 98765 43210"
-                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-muted-foreground/60 text-white"
+                  className="bg-black/70 border-white/20 focus-visible:ring-primary focus-visible:border-primary h-12 rounded-xl placeholder:text-white/50 text-white font-medium shadow-inner"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-muted-foreground pl-1">Message</label>
+                <label className="text-sm font-bold text-white/80 pl-1">Message</label>
                 <Textarea 
                   {...register("message")} 
                   placeholder="Tell me about your project..."
-                  className="bg-black/50 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[150px] rounded-xl resize-none placeholder:text-muted-foreground/60 text-white"
+                  className="bg-black/70 border-white/20 focus-visible:ring-primary focus-visible:border-primary min-h-[150px] rounded-xl resize-none placeholder:text-white/50 text-white font-medium shadow-inner"
                 />
-                {errors.message && <p className="text-destructive text-sm pl-1 font-medium">{errors.message.message}</p>}
+                {errors.message && <p className="text-red-400 text-sm pl-1 font-bold">{errors.message.message}</p>}
               </div>
 
               <Button 

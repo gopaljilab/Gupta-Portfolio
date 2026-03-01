@@ -1,60 +1,78 @@
 import { motion } from "framer-motion";
-import { Award, Star, Trophy, Target } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
-const achievements = [
+const certifications = [
   {
-    title: "Improved Data Efficiency by 40%",
-    description: "Optimized data handling processes in University Management and Bank ATM projects.",
-    icon: Target,
-    color: "text-blue-500",
-    bg: "bg-blue-500/10"
+    title: "Java Full-Stack Development",
+    issuer: "NativeSoftTech",
+    year: "2025",
+    credentialId: "NST-JAVA-2025-001",
+    link: "https://example.com/verify/nst-java"
   },
   {
-    title: "Open Source Contributor",
-    description: "Active contributor to Elite Coders and Social Winter of Code, fixing bugs and improving code quality.",
-    icon: Star,
-    color: "text-yellow-500",
-    bg: "bg-yellow-500/10"
+    title: "SQL & Database Management",
+    issuer: "RD INFRO TECHNOLOGY",
+    year: "2025",
+    credentialId: "RD-SQL-2025-452",
+    link: "https://example.com/verify/rd-sql"
   },
   {
-    title: "Java Full-Stack Training",
-    description: "Completed intensive remote internship focused on Java, JSP, and MVC architecture at Arcane Programming Infotech.",
-    icon: Award,
-    color: "text-primary",
-    bg: "bg-primary/10"
-  },
-  {
-    title: "Polytechnic Diploma in CSE",
-    description: "Graduated from MMIT Aligarh with a strong foundation in Computer Science and Engineering.",
-    icon: Trophy,
-    color: "text-purple-500",
-    bg: "bg-purple-500/10"
+    title: "Advanced Java with JSP",
+    issuer: "Arcane Programming Infotech",
+    year: "2023",
+    credentialId: "API-JSP-2023-882",
+    link: ""
   }
 ];
 
 export function Achievements() {
   return (
-    <Section id="achievements" title="Achievements" subtitle="Milestones & Recognition">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {achievements.map((achievement, index) => (
+    <Section id="achievements" title="Certifications" subtitle="Professional Credentials">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {certifications.map((cert, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-primary/30 transition-all group"
+            className="bg-card p-6 rounded-2xl border border-white/10 hover:border-primary/30 transition-all group hover:shadow-lg"
           >
-            <div className={`w-12 h-12 rounded-xl ${achievement.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-              <achievement.icon className={`w-6 h-6 ${achievement.color}`} />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform text-primary">
+              <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-              {achievement.title}
+            
+            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+              {cert.title}
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {achievement.description}
-            </p>
+            
+            <div className="flex flex-col gap-1 mb-4">
+              <p className="text-muted-foreground font-medium">
+                {cert.issuer}
+              </p>
+              <p className="text-muted-foreground/60 text-sm">
+                Issued {cert.year}
+              </p>
+            </div>
+
+            {cert.credentialId && (
+              <p className="text-xs text-muted-foreground/40 font-mono mb-4">
+                ID: {cert.credentialId}
+              </p>
+            )}
+
+            {cert.link && (
+              <a 
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline group/link"
+              >
+                View Credential
+                <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+              </a>
+            )}
           </motion.div>
         ))}
       </div>

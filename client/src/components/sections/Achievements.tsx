@@ -11,8 +11,32 @@ import coreJavaJpeg from "@assets/1727200587497_1772355110365.jpeg";
 import scalerFundamentalsPng from "@assets/f88dd432e07f775cb46efddb76cefae72dbbb1fd126a7f2f6c4727b5f6c0cc_1772355110366.png";
 import nativeSoftTechJpg from "@assets/Gopal_Gupta_1772355110367.jpg";
 import rdInfroSqlPng from "@assets/SQL_1772355110367.png";
+import trivediJpg from "@assets/PHOTO-2024-02-02-20-22-07_1772355409539.jpg";
+import mecatredzJpg from "@assets/PHOTO-2024-02-02-20-22-06_1772355409542.jpg";
+import letsUpgradePng from "@assets/LUEYTCAUG124371_1772355409542.png";
 
 const certifications = [
+  {
+    title: "Advance Diploma in IT & System Management",
+    issuer: "Trivedi College of IT & Management",
+    year: "2019",
+    credentialId: "Reg. 269",
+    image: trivediJpg
+  },
+  {
+    title: "Web Technologies Workshop",
+    issuer: "Mecatredz Technology (MMIT Aligarh)",
+    year: "2022",
+    credentialId: "COMPLETION-2022",
+    image: mecatredzJpg
+  },
+  {
+    title: "Building YouTube Clone API Bootcamp",
+    issuer: "LetsUpgrade",
+    year: "2024",
+    credentialId: "LUEYTCAUG124371",
+    image: letsUpgradePng
+  },
   {
     title: "Smart India Hackathon 2025 - Participation",
     issuer: "Ministry of Education & AICTE",

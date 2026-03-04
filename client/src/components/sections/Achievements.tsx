@@ -120,15 +120,15 @@ export function Achievements() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-card p-6 rounded-2xl border border-white/10 hover:border-primary/30 transition-all group hover:shadow-lg flex flex-col h-full"
+            className="bg-white p-6 rounded-2xl border border-slate-100 hover:border-primary/30 transition-all group hover:shadow-md flex flex-col h-full shadow-sm"
           >
-            <div className="relative aspect-video mb-4 overflow-hidden rounded-xl border border-white/5 bg-muted">
+            <div className="relative aspect-video mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50">
                <img 
                  src={cert.image} 
                  alt={cert.title}
                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                />
-               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+               <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                  <ImageIcon className="w-8 h-8 text-white opacity-70" />
                </div>
             </div>
@@ -138,21 +138,21 @@ export function Achievements() {
                 <Award className="w-5 h-5" />
               </div>
               
-              <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                 {cert.title}
               </h3>
               
               <div className="flex flex-col gap-0.5 mb-4">
-                <p className="text-muted-foreground font-medium text-sm">
+                <p className="text-slate-600 font-bold text-sm">
                   {cert.issuer}
                 </p>
-                <p className="text-muted-foreground/60 text-xs">
+                <p className="text-slate-400 text-xs font-medium">
                   Issued {cert.year}
                 </p>
               </div>
 
               {cert.credentialId && (
-                <p className="text-[10px] text-muted-foreground/40 font-mono mb-4 break-all">
+                <p className="text-[10px] text-slate-400 font-mono mb-4 break-all opacity-60">
                   ID: {cert.credentialId}
                 </p>
               )}
@@ -161,7 +161,7 @@ export function Achievements() {
             {cert.image && (
               <button 
                 onClick={() => window.open(cert.image, '_blank')}
-                className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline group/link mt-auto"
+                className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline group/link mt-auto uppercase tracking-wider"
               >
                 View Certificate
                 <ExternalLink className="w-3 h-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />

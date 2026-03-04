@@ -52,11 +52,9 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group rounded-2xl overflow-hidden glass-panel border border-white/5 hover:border-primary/30 transition-all duration-500"
+            className="group rounded-2xl overflow-hidden bg-white border border-slate-100 hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-md"
           >
-            <div className="relative aspect-video overflow-hidden bg-muted">
-              <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors z-10"></div>
-              {/* Using high quality unsplash placeholders relevant to tech/abstract */}
+            <div className="relative aspect-video overflow-hidden bg-slate-100">
               <img 
                 src={project.image} 
                 alt={project.title} 
@@ -64,40 +62,38 @@ export function Projects() {
               />
               
               <div className="absolute top-4 left-4 z-20">
-                <span className="px-3 py-1 text-xs font-medium rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white">
+                <span className="px-3 py-1 text-xs font-bold rounded-full bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-sm">
                   {project.category}
                 </span>
               </div>
               
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-6">
-                <div className="flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 w-full justify-end">
-                  <a href={project.github} className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary transition-colors">
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a href={project.link} className="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center hover:bg-white transition-colors box-glow">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
+              <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center gap-4">
+                <a href={project.github} className="w-12 h-12 rounded-full bg-white text-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a href={project.link} className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
+                  <ExternalLink className="w-6 h-6" />
+                </a>
               </div>
             </div>
             
             <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
-              <p className="text-xs font-medium text-primary/80 mb-3">
+              <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">
                 {project.title === "Om Restaurant" ? "Java, Spring Boot, MySQL, HTML, CSS" :
                  project.title === "Portfolio Website" ? "React, Tailwind CSS, Framer Motion" :
                  project.title === "Wash'n Vibe" ? "UI/UX Prototype, Figma" :
                  project.title === "CryptoraHub" ? "Web3, Blockchain UI" : ""}
               </p>
-              <p className="text-muted-foreground mb-6 line-clamp-2">
+              <p className="text-slate-600 mb-6 line-clamp-2 leading-relaxed">
                 {project.description}
               </p>
               
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-xs font-medium px-2.5 py-1 rounded-md bg-white/5 text-muted-foreground border border-white/5">
+                  <span key={tag} className="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-50 text-slate-500 border border-slate-100">
                     {tag}
                   </span>
                 ))}

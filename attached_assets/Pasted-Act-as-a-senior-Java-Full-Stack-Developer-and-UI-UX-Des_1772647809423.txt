@@ -1,0 +1,104 @@
+Act as a senior Java Full-Stack Developer and UI/UX Designer.
+I have a personal developer portfolio website built using modern web technologies.
+Do NOT change the layout structure or core content logic.
+
+🎯 Goal
+
+Refine the UI/UX, color system, typography, spacing, and visual hierarchy to make the portfolio:
+
+Professional and recruiter-friendly
+
+Suitable for Java Full-Stack Developer roles
+
+Clean, modern, and well-structured
+
+🎨 Color System (CRITICAL)
+
+Use ONE consistent primary color only across the site
+→ Primary Green: #22C55E
+
+Remove extra green shades and unnecessary gradients
+
+Background: white or very light neutral
+
+Main text: dark gray / black for high readability
+
+Muted text: soft gray
+
+Apply the primary color ONLY to:
+
+Headings and highlighted name
+
+Primary CTA buttons
+
+Icons and active links
+
+Status badges (e.g., “Available for work”)
+
+🧠 Typography & Visual Hierarchy
+
+Keep headings bold and impactful
+
+Slightly tone down brightness of large green headings
+
+Body text must remain neutral (no colored paragraphs)
+
+Ensure clear hierarchy:
+
+Name & Role
+
+Section headings
+
+Supporting content
+
+🔘 Buttons & CTAs
+
+Primary CTA (Download CV): solid green background, white text
+
+Secondary CTA (Contact Me): outlined or neutral style
+
+Add subtle hover effects (smooth, professional, non-flashy)
+
+🖼️ Profile Image Styling
+
+Maintain circular image layout
+
+Reduce intensity of green glow/background
+
+Keep focus on face, not effects
+
+📐 Layout & Spacing
+
+Improve white space between sections
+
+Keep padding and margins consistent
+
+Ensure clean alignment and balance
+
+❌ Restrictions
+
+Do NOT change portfolio content meaning
+
+Do NOT add or remove sections
+
+Do NOT introduce new colors
+
+Do NOT break responsiveness
+
+✅ Output Expectations
+
+Return clean, optimized, production-ready code
+
+Centralize color variables (CSS/Tailwind)
+
+Follow modern UI/UX and full-stack portfolio standards
+
+Portfolio should reflect both technical strength and design sense
+
+🔍 Optimization Focus
+
+Java Full-Stack Developer roles
+
+Backend-oriented recruiters
+
+Clean UI with strong usability

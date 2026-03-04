@@ -54,25 +54,25 @@ export function Experience() {
             className="relative pl-8 md:pl-0"
           >
             {/* Timeline dot */}
-            <div className="absolute -left-[41px] md:-left-[41px] top-1 w-12 h-12 rounded-full bg-card border border-white/10 flex items-center justify-center z-10 group-hover:border-primary/50 transition-colors shadow-lg">
+            <div className="absolute -left-[41px] md:-left-[41px] top-1 w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center z-10 transition-colors shadow-sm">
               <exp.icon className="w-5 h-5 text-primary" />
             </div>
 
-            <div className="glass-panel p-6 md:p-8 rounded-2xl hover:border-primary/30 transition-colors group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+            <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 hover:border-primary/30 transition-all group relative overflow-hidden shadow-sm">
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
               
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors">
                     {exp.role}
                   </h3>
-                  <p className="text-lg text-muted-foreground">{exp.company}</p>
+                  <p className="text-lg text-slate-600 font-medium">{exp.company}</p>
                 </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 text-sm text-muted-foreground border border-white/5 whitespace-nowrap w-fit">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 text-sm text-slate-500 border border-slate-100 whitespace-nowrap w-fit font-bold">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 {exp.description}
               </p>
             </div>

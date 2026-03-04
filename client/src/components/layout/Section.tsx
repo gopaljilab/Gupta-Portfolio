@@ -14,7 +14,7 @@ export function Section({ id, title, subtitle, children, className = "", darker 
   return (
     <section 
       id={id} 
-      className={`py-20 md:py-32 ${darker ? 'bg-background/50' : ''} ${className}`}
+      className={`py-24 md:py-32 ${darker ? 'bg-slate-50/50' : 'bg-white'} ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
@@ -26,13 +26,13 @@ export function Section({ id, title, subtitle, children, className = "", darker 
             className="mb-16 md:mb-20"
           >
             {subtitle && (
-              <span className="text-primary font-medium tracking-wider uppercase text-sm mb-3 block flex items-center gap-2">
-                <span className="w-8 h-px bg-primary"></span>
+              <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block flex items-center gap-2">
+                <span className="w-10 h-0.5 bg-primary"></span>
                 {subtitle}
               </span>
             )}
             {title && (
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                 {title}
               </h2>
             )}

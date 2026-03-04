@@ -30,12 +30,12 @@ export function Skills() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_10px_30px_-10px_rgba(0,255,136,0.15)] transition-all duration-300 text-center"
+            className="bg-white p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:-translate-y-1 border border-slate-100 hover:border-primary/40 hover:shadow-md transition-all duration-300 text-center shadow-sm"
           >
             <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">
               {skill.icon}
             </div>
-            <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+            <h4 className="font-bold text-slate-800 group-hover:text-primary transition-colors">
               {skill.name}
             </h4>
           </motion.div>

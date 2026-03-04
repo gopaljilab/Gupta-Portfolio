@@ -90,12 +90,14 @@ export function Hero() {
             {/* ACTION BUTTONS */}
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
               <Button
-                onClick={handleDownloadCV}
+                asChild
                 size="lg"
                 className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto group"
               >
-                Download CV
-                <Download className="ml-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                <a href="/resume.pdf" download="Gopal_Gupta_Resume.pdf">
+                  Download CV
+                  <Download className="ml-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                </a>
               </Button>
 
               <Button

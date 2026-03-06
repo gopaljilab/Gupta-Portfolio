@@ -4,40 +4,40 @@ import { Section } from "@/components/layout/Section";
 
 const projects = [
   {
-    title: "Om Restaurant",
+    title: "Om Restaurant Management System",
     category: "Full Stack",
     description: "A complete restaurant management system with ordering, inventory, and analytics dashboards.",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=60",
+    image: "./OM.jpg",
     tags: ["Java", "Spring Boot", "MySQL", "React"],
-    link: "#",
-    github: "#"
+    link: "https://omrestaurant.netlify.app/",
+    github: "https://github.com/gopaljilab/OmRestaurant"
   },
   {
     title: "Portfolio Website",
     category: "Frontend",
     description: "A modern, highly interactive personal portfolio to showcase projects and skills with seamless animations.",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=60",
+    image: "/Portfolio.jpg",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "#",
-    github: "#"
+    link: "https://potfoliogopal.netlify.app/",
+    github: "https://github.com/gopaljilab/portfolio"
   },
   {
     title: "Wash'n Vibe",
     category: "Prototype / UI",
     description: "A sleek mobile app prototype for a modern laundry service, focusing on user experience and visual design.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=60",
+    image: "Wash.jpg",
     tags: ["Figma", "UI/UX", "Prototyping"],
-    link: "#",
+    link: "https://www.figma.com/proto/2mdtYq2x2Y6Kjgx1QDHbhr/Wash-N-Vibe?node-id=6-3980&starting-point-node-id=1%3A3&t=IJ0sJ9JfeJj3YfqH-1",
     github: "#"
   },
   {
-    title: "CryptoraHub",
+    title: "NCVET-BlockChain Certification System",
     category: "Crypto & Web3",
-    description: "A cryptocurrency tracking dashboard providing real-time market data, charts, and portfolio management.",
-    image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&auto=format&fit=crop&q=60",
+    description: "India's vocational education ecosystem faces challenges with certificate forgery, manual verification delays, and lack of interoperability. This blockchain-enabled platform provides tamper-proof, instantly verifiable digital credentials.",
+    image: "/NCVET.jpg",
     tags: ["React", "Web3.js", "Chart.js", "API"],
-    link: "#",
-    github: "#"
+    link: "https://www.figma.com/make/AB1LEuPmvUhr1fMaDX3q3w/Blockchain-Certificate-Platform-Prototype?fullscreen=1&t=rLkYbttE95UaCYCf-1",
+    github: "https://github.com/gopaljilab/NVCET-Blockchain-Certification-System"
   },
 ];
 

@@ -2,18 +2,17 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail, MapPin, Send, Loader2, Github, Linkedin } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useSubmitContact } from "@/hooks/use-contact";
 import { api, type ContactSubmitInput } from "@shared/routes";
 
 export function Contact() {
   const { toast } = useToast();
-  const submitMutation = useSubmitContact();
 
   const {
     register,
@@ -24,23 +23,33 @@ export function Contact() {
     resolver: zodResolver(api.contact.submit.input),
   });
 
-  const onSubmit = (data: ContactSubmitInput) => {
-    submitMutation.mutate(data, {
-      onSuccess: () => {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        reset();
-      },
-      onError: (error) => {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: error.message,
-        });
-      },
-    });
+  const onSubmit = async (data: ContactSubmitInput) => {
+    try {
+      await emailjs.send(
+        "service_xn1ckfm",
+        "template_r652hq8",
+        {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
+        },
+        "P6dp6JGpHK-ZGqUVS"
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      reset();
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+      });
+    }
   };
 
   return (
@@ -51,7 +60,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="lg:w-5/12 z-10"
         >
@@ -64,11 +73,11 @@ export function Contact() {
           </p>
 
           <p className="text-slate-600 mb-10 text-lg leading-relaxed font-medium">
-            I'm currently available for freelance work and full-time opportunities.
-            If you have a project that needs some creative juice, hit me up!
+            I'm currently available for full-time opportunities and backend development roles.
           </p>
 
           <div className="space-y-6">
+
             {/* EMAIL */}
             <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -101,10 +110,12 @@ export function Contact() {
                 </p>
               </div>
             </div>
+
           </div>
 
           {/* SOCIAL LINKS */}
           <div className="flex gap-4 mt-12">
+
             <a
               href="https://github.com/gopaljilab"
               target="_blank"
@@ -122,6 +133,7 @@ export function Contact() {
             >
               <Linkedin className="w-6 h-6" />
             </a>
+
           </div>
         </motion.div>
 
@@ -129,23 +141,26 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="lg:w-7/12 z-10"
         >
-          <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-sm relative">
+          <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-sm">
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                 {/* NAME */}
                 <div>
                   <label className="text-sm font-bold text-slate-700 mb-1.5 block">
                     Your Name
                   </label>
-                  <Input {...register("name")} placeholder="John Doe" className="h-12 border-slate-200 focus:border-primary focus:ring-primary/20 bg-slate-50/50" />
+                  <Input {...register("name")} placeholder="John Doe" />
                   {errors.name && (
-                    <p className="text-red-500 text-sm mt-1.5 font-medium">{errors.name.message}</p>
+                    <p className="text-red-500 text-sm mt-1.5">
+                      {errors.name.message}
+                    </p>
                   )}
                 </div>
 
@@ -154,16 +169,14 @@ export function Contact() {
                   <label className="text-sm font-bold text-slate-700 mb-1.5 block">
                     Your Email
                   </label>
-                  <Input
-                    {...register("email")}
-                    type="email"
-                    placeholder="john@example.com"
-                    className="h-12 border-slate-200 focus:border-primary focus:ring-primary/20 bg-slate-50/50"
-                  />
+                  <Input {...register("email")} type="email" placeholder="john@example.com" />
                   {errors.email && (
-                    <p className="text-red-500 text-sm mt-1.5 font-medium">{errors.email.message}</p>
+                    <p className="text-red-500 text-sm mt-1.5">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
+
               </div>
 
               {/* PHONE */}
@@ -171,11 +184,7 @@ export function Contact() {
                 <label className="text-sm font-bold text-slate-700 mb-1.5 block">
                   Phone Number (Optional)
                 </label>
-                <Input
-                  {...register("phone")}
-                  placeholder="+91 98765 43210"
-                  className="h-12 border-slate-200 focus:border-primary focus:ring-primary/20 bg-slate-50/50"
-                />
+                <Input {...register("phone")} placeholder="+91 98765 43210" />
               </div>
 
               {/* MESSAGE */}
@@ -183,23 +192,21 @@ export function Contact() {
                 <label className="text-sm font-bold text-slate-700 mb-1.5 block">
                   Message
                 </label>
-                <Textarea
-                  {...register("message")}
-                  placeholder="Tell me about your project..."
-                  className="min-h-[150px] border-slate-200 focus:border-primary focus:ring-primary/20 bg-slate-50/50"
-                />
+                <Textarea {...register("message")} placeholder="Tell me about your project..." />
                 {errors.message && (
-                  <p className="text-red-500 text-sm mt-1.5 font-medium">{errors.message.message}</p>
+                  <p className="text-red-500 text-sm mt-1.5">
+                    {errors.message.message}
+                  </p>
                 )}
               </div>
 
               {/* SUBMIT */}
               <Button
                 type="submit"
-                disabled={isSubmitting || submitMutation.isPending}
-                className="w-full h-14 font-bold rounded-xl bg-primary text-white hover:bg-primary/90 transition-all shadow-sm"
+                disabled={isSubmitting}
+                className="w-full h-14 font-bold rounded-xl bg-primary text-white hover:bg-primary/90"
               >
-                {isSubmitting || submitMutation.isPending ? (
+                {isSubmitting ? (
                   <>
                     <Loader2 className="w-5 h-5 mr-2 animate-spin" />
                     Sending...
@@ -211,6 +218,7 @@ export function Contact() {
                   </>
                 )}
               </Button>
+
             </form>
           </div>
         </motion.div>

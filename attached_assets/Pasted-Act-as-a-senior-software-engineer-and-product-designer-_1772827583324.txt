@@ -1,0 +1,295 @@
+Act as a senior software engineer and product designer who specializes in developer portfolios used by backend engineers hired at top tech companies.
+
+Edit my existing portfolio code instead of rebuilding everything. Keep my content but improve the layout, structure, and presentation so the portfolio clearly reflects that I am a **Java Full-Stack Developer focused on backend engineering**.
+
+Follow this exact structure and make the UI clean, minimal, and professional.
+
+---
+
+1. HERO SECTION (ENGINEER VALUE STATEMENT)
+
+Make the hero section simple and developer-focused.
+
+Display the name prominently:
+
+Gopal Gupta
+
+Below it add a strong engineering value statement:
+
+"Java Full-Stack Developer building scalable backend systems, REST APIs, and database-driven applications using Spring Boot."
+
+Add two call-to-action buttons:
+• View Projects
+• GitHub / Contact
+
+Avoid flashy animations. Keep it minimal and professional.
+
+---
+
+2. ABOUT SECTION (ENGINEERING FOCUS)
+
+Write a concise introduction that highlights:
+
+• Java backend development
+• Spring Boot API development
+• Database design
+• Problem solving (DSA)
+
+Example style:
+
+"I am a Java Full-Stack Developer with experience building REST APIs and scalable backend services using Spring Boot. I enjoy solving complex problems, designing efficient database systems, and contributing to open-source projects."
+
+Keep this section short and professional.
+
+---
+
+3. TECH STACK SECTION
+
+Organize skills into clear engineering categories.
+
+Languages
+Java
+JavaScript
+SQL
+
+Backend
+Spring Boot
+REST APIs
+Microservices
+
+Databases
+MySQL
+MongoDB
+
+Tools
+Git
+Docker
+Postman
+Linux
+
+Display skills in a clean grid with icons.
+
+Icons should appear grayscale by default and become colored when hovered.
+
+---
+
+4. EXPERIENCE SECTION (TIMELINE)
+
+Convert the experience section into a vertical timeline.
+
+Each entry should include:
+
+Year
+Role
+Company
+Achievements
+
+Highlight measurable outcomes in bold.
+
+Example:
+
+Java Development Intern — NativeSoftTech
+
+• Built REST APIs using Spring Boot
+• Improved query performance by **30%**
+• Implemented authentication and API testing using Postman
+
+---
+
+5. BACKEND PROJECTS SECTION (MOST IMPORTANT)
+
+Create professional project cards.
+
+Each project must include:
+
+Project Title
+Short description
+Key features
+GitHub link
+
+Add a tech stack tag system:
+
+Example tags:
+Java
+Spring Boot
+React
+MySQL
+REST API
+
+Project description should highlight engineering work:
+
+Example:
+
+Task Management System
+
+• Built a RESTful backend using Spring Boot
+• Implemented JWT authentication
+• Designed relational database schema in MySQL
+• Added pagination and filtering APIs
+
+Cards should have a subtle hover lift effect.
+
+---
+
+6. API SHOWCASE SECTION
+
+Add a section specifically highlighting backend APIs.
+
+Each API should show:
+
+API Name
+Technology stack
+Key features
+
+Example:
+
+Task Management API
+
+Tech Stack:
+Spring Boot • MySQL • JWT
+
+Features:
+• CRUD operations
+• Authentication
+• Pagination
+• Role-based access control
+
+---
+
+7. PROBLEM SOLVING / DSA SECTION
+
+Add a section showing coding practice.
+
+Example:
+
+Solved 200+ Data Structures and Algorithms problems.
+
+Platforms:
+LeetCode
+GeeksforGeeks
+
+Focus areas:
+Arrays
+Hashing
+Searching
+Sorting
+
+Display platform icons with profile links.
+
+---
+
+8. OPEN SOURCE CONTRIBUTIONS
+
+Create a section highlighting contributions.
+
+Show:
+
+Project name
+Contribution type
+GitHub link
+
+Example:
+
+Elite Coders Repository
+
+• Fixed Java bugs
+• Improved documentation
+• Added optimized logic for array operations
+
+---
+
+9. CERTIFICATIONS SECTION
+
+Display certifications in a responsive grid.
+
+Each card should show:
+
+Certification name
+Platform
+
+Example:
+
+AWS Cloud Practitioner
+NPTEL DBMS
+Java Development Internship
+
+Cards should stay centered and stack properly on mobile devices.
+
+---
+
+10. CONTACT SECTION
+
+Create a clean "Get in Touch" section.
+
+Include:
+
+Email
+LinkedIn
+GitHub
+
+Add a simple contact form.
+
+Center everything and ensure mobile responsiveness.
+
+---
+
+11. NAVIGATION
+
+Make the navbar sticky.
+
+Add smooth scrolling to sections.
+
+Sections in navbar:
+
+Home
+About
+Tech Stack
+Experience
+Projects
+APIs
+Problem Solving
+Open Source
+Certifications
+Contact
+
+---
+
+12. COLOR PALETTE (PROFESSIONAL TECH STYLE)
+
+Primary accent:
+Emerald Green #10b981
+
+Text color:
+Dark Slate #1e293b
+
+Section background:
+Light Gray #f8fafc
+
+Card background:
+White
+
+Keep the design minimal and readable.
+
+---
+
+13. RESPONSIVENESS
+
+Ensure the site works perfectly on mobile.
+
+• Project cards stack vertically
+• Certification cards center properly
+• Contact form is centered
+• Buttons remain easily clickable
+
+---
+
+FINAL GOAL
+
+The portfolio should clearly present me as a **backend-focused Java Full-Stack Developer** with:
+
+• real projects
+• API development experience
+• problem solving skills
+• open source contributions
+
+Avoid flashy UI and focus on clarity, technical depth, and recruiter readability.

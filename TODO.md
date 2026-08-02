@@ -11,5 +11,5 @@ The portfolio is a static site (Contact form uses EmailJS directly in the browse
 - [x] Get plan approval from user
 - [x] Add `vercel.json` with `buildCommand: "vite build"`, `outputDirectory: "dist/public"`, framework `vite`, and SPA rewrites
 - [x] Run `vite build` locally to verify `dist/public` is produced (dist now contains ONLY `public/` — no `dist/index.cjs`)
-- [ ] Commit & push to GitHub so Vercel redeploys
+- [x] Commit & push to GitHub so Vercel redeploys (pushed `28f14fd` to `origin/main`)
 

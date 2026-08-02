@@ -39,7 +39,7 @@ export function Hero() {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border border-slate-200 overflow-hidden relative z-10 bg-white p-1.5 shadow-sm">
                 <div className="w-full h-full rounded-full overflow-hidden bg-slate-100">
                   <img
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQGqYSKt481srA/profile-displayphoto-crop_800_800/B4DZwEFFHBIsAI-/0/1769594967419?e=1773273600&v=beta&t=Od4tAEoeGmCF9pAvi3NMaRcskKcxazt9ijnQkhgKH1A"
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQGqYSKt481srA/profile-displayphoto-crop_800_800/B4DZwEFFHBIsAI-/0/1769594967419?e=1787184000&v=beta&t=yLwvbEGwH2cYo4vbQDn_k7UAjDTQrHJOZ-JFQuB465s"
                     alt="Gopal Gupta"
                     className="w-full h-full object-cover"
                   />

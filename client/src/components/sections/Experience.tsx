@@ -43,7 +43,7 @@ const experiences = [
 export function Experience() {
   return (
     <Section id="experience" title="Work Experience" subtitle="My Journey">
-      <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-8 space-y-12">
+      <div className="relative border-l border-slate-200 dark:border-slate-800 ml-4 md:ml-0 md:pl-8 space-y-12">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
@@ -54,25 +54,25 @@ export function Experience() {
             className="relative pl-8 md:pl-0"
           >
             {/* Timeline dot */}
-            <div className="absolute -left-[41px] md:-left-[41px] top-1 w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center z-10 transition-colors shadow-sm">
+            <div className="absolute -left-[41px] md:-left-[41px] top-1 w-12 h-12 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center z-10 transition-colors shadow-sm">
               <exp.icon className="w-5 h-5 text-primary" />
             </div>
 
-            <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 hover:border-primary/30 transition-all group relative overflow-hidden shadow-sm">
+            <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all group relative overflow-hidden shadow-sm">
               <div className="absolute top-0 left-0 w-1.5 h-full bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
               
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">
                     {exp.role}
                   </h3>
-                  <p className="text-lg text-slate-600 font-medium">{exp.company}</p>
+                  <p className="text-lg text-slate-600 dark:text-slate-400 font-medium">{exp.company}</p>
                 </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 text-sm text-slate-500 border border-slate-100 whitespace-nowrap w-fit font-bold">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-sm text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700 whitespace-nowrap w-fit font-bold">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 {exp.description}
               </p>
             </div>

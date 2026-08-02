@@ -9,9 +9,9 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="py-12 border-y border-slate-100 bg-white shadow-sm">
+    <section className="py-12 border-y border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-slate-100">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-slate-100 dark:divide-slate-800">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -24,7 +24,7 @@ export function Stats() {
               <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">
                 {stat.value}
               </h3>
-              <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">
+              <p className="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-widest font-bold">
                 {stat.label}
               </p>
             </motion.div>

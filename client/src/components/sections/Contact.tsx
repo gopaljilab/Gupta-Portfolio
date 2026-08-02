@@ -64,7 +64,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="lg:w-5/12 z-10"
         >
-          <h3 className="text-3xl font-bold mb-3 text-slate-900 leading-tight">
+          <h3 className="text-3xl font-bold mb-3 text-slate-900 dark:text-slate-100 leading-tight">
             Let’s build something awesome together.
           </h3>
 
@@ -72,14 +72,14 @@ export function Contact() {
             Open to internships, entry-level roles, and open-source opportunities.
           </p>
 
-          <p className="text-slate-600 mb-10 text-lg leading-relaxed font-medium">
+          <p className="text-slate-600 dark:text-slate-400 mb-10 text-lg leading-relaxed font-medium">
             I'm currently available for full-time opportunities and backend development roles.
           </p>
 
           <div className="space-y-6">
 
             {/* EMAIL */}
-            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
@@ -89,7 +89,7 @@ export function Contact() {
                 </p>
                 <a
                   href="mailto:gopaljilab@gmail.com"
-                  className="text-lg font-bold text-slate-900 hover:text-primary transition"
+                  className="text-lg font-bold text-slate-900 dark:text-slate-100 hover:text-primary transition"
                 >
                   gopaljilab@gmail.com
                 </a>
@@ -97,7 +97,7 @@ export function Contact() {
             </div>
 
             {/* LOCATION */}
-            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
@@ -105,7 +105,7 @@ export function Contact() {
                 <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">
                   Location
                 </p>
-                <p className="text-lg font-bold text-slate-900">
+                <p className="text-lg font-bold text-slate-900 dark:text-slate-100">
                   Bengaluru, Karnataka, India
                 </p>
               </div>
@@ -120,7 +120,7 @@ export function Contact() {
               href="https://github.com/gopaljilab"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition bg-white shadow-sm"
+              className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-primary hover:border-primary transition bg-white dark:bg-slate-900 shadow-sm"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -129,7 +129,7 @@ export function Contact() {
               href="https://www.linkedin.com/in/guptagopal001/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition bg-white shadow-sm"
+              className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-primary hover:border-primary transition bg-white dark:bg-slate-900 shadow-sm"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -145,7 +145,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="lg:w-7/12 z-10"
         >
-          <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-sm">
+          <div className="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 
@@ -166,7 +166,7 @@ export function Contact() {
 
                 {/* EMAIL */}
                 <div>
-                  <label className="text-sm font-bold text-slate-700 mb-1.5 block">
+                  <label className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5 block">
                     Your Email
                   </label>
                   <Input {...register("email")} type="email" placeholder="john@example.com" />
@@ -181,7 +181,7 @@ export function Contact() {
 
               {/* PHONE */}
               <div>
-                <label className="text-sm font-bold text-slate-700 mb-1.5 block">
+                <label className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5 block">
                   Phone Number (Optional)
                 </label>
                 <Input {...register("phone")} placeholder="+91 98765 43210" />
@@ -189,7 +189,7 @@ export function Contact() {
 
               {/* MESSAGE */}
               <div>
-                <label className="text-sm font-bold text-slate-700 mb-1.5 block">
+                <label className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5 block">
                   Message
                 </label>
                 <Textarea {...register("message")} placeholder="Tell me about your project..." />

@@ -120,9 +120,9 @@ export function Achievements() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white p-6 rounded-2xl border border-slate-100 hover:border-primary/30 transition-all group hover:shadow-md flex flex-col h-full shadow-sm"
+            className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all group hover:shadow-md flex flex-col h-full shadow-sm"
           >
-            <div className="relative aspect-video mb-4 overflow-hidden rounded-xl border border-slate-100 bg-slate-50">
+            <div className="relative aspect-video mb-4 overflow-hidden rounded-xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
                <img 
                  src={cert.image} 
                  alt={cert.title}
@@ -138,21 +138,21 @@ export function Achievements() {
                 <Award className="w-5 h-5" />
               </div>
               
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                 {cert.title}
               </h3>
               
               <div className="flex flex-col gap-0.5 mb-4">
-                <p className="text-slate-600 font-bold text-sm">
+                <p className="text-slate-600 dark:text-slate-400 font-bold text-sm">
                   {cert.issuer}
                 </p>
-                <p className="text-slate-400 text-xs font-medium">
+                <p className="text-slate-400 dark:text-slate-500 text-xs font-medium">
                   Issued {cert.year}
                 </p>
               </div>
 
               {cert.credentialId && (
-                <p className="text-[10px] text-slate-400 font-mono mb-4 break-all opacity-60">
+                <p className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mb-4 break-all opacity-60">
                   ID: {cert.credentialId}
                 </p>
               )}

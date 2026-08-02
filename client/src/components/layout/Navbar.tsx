@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -59,16 +60,20 @@ export function Navbar() {
             <Button asChild className="rounded-full px-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:box-glow transition-all">
               <a href="#contact">Hire Me</a>
             </Button>
+            <ThemeToggle />
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-foreground p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          {/* Mobile: Theme toggle + Menu Toggle */}
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle />
+            <button
+              className="text-foreground p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -79,7 +84,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-panel border-t border-white/5 overflow-hidden"
+            className="md:hidden glass-panel border-t border-slate-200 dark:border-slate-800 overflow-hidden"
           >
             <nav className="flex flex-col px-4 py-6 gap-4">
               {navLinks.map((link) => (
@@ -87,7 +92,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 border-b border-white/5"
+                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors py-2 border-b border-slate-200 dark:border-slate-800"
                 >
                   {link.name}
                 </a>

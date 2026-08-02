@@ -1,6 +1,8 @@
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Section } from "@/components/layout/Section";
+import { gsap } from "@/lib/gsap";
 
 const projects = [
   {
@@ -42,9 +44,34 @@ const projects = [
 ];
 
 export function Projects() {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".project-card",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+    }, gridRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Section id="projects" title="Featured Projects" subtitle="My Work" darker>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -52,9 +79,9 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group rounded-2xl overflow-hidden bg-white border border-slate-100 hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-md"
+            className="project-card group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-md"
           >
-            <div className="relative aspect-video overflow-hidden bg-slate-100">
+            <div className="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
               <img 
                 src={project.image} 
                 alt={project.title} 
@@ -62,7 +89,7 @@ export function Projects() {
               />
               
               <div className="absolute top-4 left-4 z-20">
-                <span className="px-3 py-1 text-xs font-bold rounded-full bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-sm">
+                <span className="px-3 py-1 text-xs font-bold rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 shadow-sm">
                   {project.category}
                 </span>
               </div>
@@ -78,7 +105,7 @@ export function Projects() {
             </div>
             
             <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
               <p className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">
@@ -87,13 +114,13 @@ export function Projects() {
                  project.title === "Wash'n Vibe" ? "UI/UX Prototype, Figma" :
                  project.title === "CryptoraHub" ? "Web3, Blockchain UI" : ""}
               </p>
-              <p className="text-slate-600 mb-6 line-clamp-2 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-400 mb-6 line-clamp-2 leading-relaxed">
                 {project.description}
               </p>
               
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-50 text-slate-500 border border-slate-100">
+                  <span key={tag} className="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700">
                     {tag}
                   </span>
                 ))}

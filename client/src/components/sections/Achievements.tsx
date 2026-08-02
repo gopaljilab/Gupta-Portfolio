@@ -143,7 +143,7 @@ export function Achievements() {
               </h3>
               
               <div className="flex flex-col gap-0.5 mb-4">
-                <p className="text-slate-600 dark:text-slate-400 font-bold text-sm">
+<p className="text-slate-600 dark:text-slate-300 font-bold text-sm">
                   {cert.issuer}
                 </p>
                 <p className="text-slate-400 dark:text-slate-500 text-xs font-medium">

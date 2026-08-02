@@ -72,7 +72,7 @@ export function Contact() {
             Open to internships, entry-level roles, and open-source opportunities.
           </p>
 
-          <p className="text-slate-600 dark:text-slate-400 mb-10 text-lg leading-relaxed font-medium">
+<p className="text-slate-600 dark:text-slate-300 mb-10 text-lg leading-relaxed font-medium">
             I'm currently available for full-time opportunities and backend development roles.
           </p>
 

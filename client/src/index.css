@@ -83,8 +83,8 @@
     box-shadow: none;
   }
   
-  .glass-panel {
-    @apply bg-white border border-slate-200 shadow-sm dark:bg-slate-900/80 dark:border-slate-800 dark:backdrop-blur-md;
+.glass-panel {
+    @apply bg-white border border-slate-200 shadow-sm dark:bg-slate-900/80 dark:border-slate-800 dark:backdrop-blur-md backdrop-blur-lg;
   }
 }
 

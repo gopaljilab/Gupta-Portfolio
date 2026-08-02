@@ -66,13 +66,13 @@ export function Experience() {
                   <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">
                     {exp.role}
                   </h3>
-                  <p className="text-lg text-slate-600 dark:text-slate-400 font-medium">{exp.company}</p>
+<p className="text-lg text-slate-600 dark:text-slate-300 font-medium">{exp.company}</p>
                 </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-sm text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700 whitespace-nowrap w-fit font-bold">
+<span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 dark:bg-slate-800 text-sm text-slate-500 dark:text-slate-300 border border-slate-100 dark:border-slate-700 whitespace-nowrap w-fit font-bold">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+<p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {exp.description}
               </p>
             </div>

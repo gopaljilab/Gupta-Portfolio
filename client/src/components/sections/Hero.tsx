@@ -54,7 +54,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="w-full md:w-5/12 flex justify-center md:justify-start order-1 md:order-2 md:translate-x-8"
           >
-            <div className="relative">
+<div className="relative">
               <div className="absolute inset-0 bg-primary/5 rounded-full blur-2xl"></div>
 
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border border-slate-200 dark:border-slate-800 overflow-hidden relative z-10 bg-white dark:bg-slate-900 p-1.5 shadow-sm">
@@ -67,8 +67,8 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Status Badge */}
-              <div className="absolute bottom-4 right-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 py-2 px-4 rounded-full flex items-center gap-2 shadow-sm z-20">
+              {/* Status Badge — centered below image */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 py-2 px-4 rounded-full flex items-center gap-2 shadow-sm z-20 whitespace-nowrap">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
@@ -90,22 +90,46 @@ export function Hero() {
               <span className="text-sm font-bold">Say Hello</span>
             </div>
 
-            {/* Name */}
-            <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-slate-900 dark:text-slate-100">
+{/* Name */}
+            <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900 dark:text-slate-100">
               Hi, I’m <span className="text-primary">Gopal Gupta</span>
             </h1>
 
-            <h2 className="hero-title text-2xl md:text-3xl font-display text-slate-700 dark:text-slate-300 mb-6 font-semibold">
+            <h2 className="hero-title text-xl md:text-2xl font-display text-slate-700 dark:text-slate-300 mb-6 font-semibold">
               Java Full-Stack Developer | Open Source Contributor
             </h2>
 
-            <p className="hero-sub text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
+            <p className="hero-sub text-lg text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
               I build scalable Java full-stack applications using Spring Boot, React, and SQL, with hands-on experience in open-source collaboration and real-world projects.
             </p>
 
-            <div className="hero-sub flex items-center justify-center md:justify-start gap-2 text-slate-500 dark:text-slate-400 mb-10 font-medium">
-              <MapPin className="w-5 h-5 text-primary" />
-              <span>Bengaluru, Karnataka, India</span>
+            {/* Location + Social Links combined row */}
+            <div className="hero-sub flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
+              <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 font-medium">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span>Bengaluru, Karnataka, India</span>
+              </div>
+              <span className="hidden sm:block text-slate-300 dark:text-slate-600">|</span>
+              <div className="flex items-center gap-2">
+                <a 
+                  href="https://github.com/gopaljilab" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary hover:border-primary/50 transition-all shadow-sm"
+                  aria-label="GitHub Profile"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/guptagopal001/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary hover:border-primary/50 transition-all shadow-sm"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
             {/* ACTION BUTTONS */}
@@ -132,28 +156,6 @@ export function Hero() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
-            </div>
-
-            {/* SOCIAL LINKS */}
-            <div className="flex items-center justify-center md:justify-start gap-4 mt-10">
-              <a 
-                href="https://github.com/gopaljilab" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary hover:border-primary/50 transition-all shadow-sm"
-                aria-label="GitHub Profile"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/guptagopal001/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary hover:border-primary/50 transition-all shadow-sm"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
             </div>
           </motion.div>
         </div>

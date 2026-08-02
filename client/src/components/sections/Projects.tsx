@@ -94,12 +94,14 @@ export function Projects() {
                 </span>
               </div>
               
-              <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center gap-4">
-                <a href={project.github} className="w-12 h-12 rounded-full bg-white text-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300">
-                  <Github className="w-6 h-6" />
+<div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center gap-4">
+                <a href={project.github} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-sm text-slate-900 text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300">
+                  <Github className="w-4 h-4" />
+                  GitHub
                 </a>
-                <a href={project.link} className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
-                  <ExternalLink className="w-6 h-6" />
+                <a href={project.link} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/90 backdrop-blur-sm text-white text-sm font-bold hover:bg-white hover:text-primary transition-all shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
+                  <ExternalLink className="w-4 h-4" />
+                  Live Demo
                 </a>
               </div>
             </div>
@@ -114,13 +116,13 @@ export function Projects() {
                  project.title === "Wash'n Vibe" ? "UI/UX Prototype, Figma" :
                  project.title === "CryptoraHub" ? "Web3, Blockchain UI" : ""}
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-6 line-clamp-2 leading-relaxed">
+<p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-2 leading-relaxed">
                 {project.description}
               </p>
               
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-100 dark:border-slate-700">
+<span key={tag} className="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-300 border border-slate-100 dark:border-slate-700">
                     {tag}
                   </span>
                 ))}

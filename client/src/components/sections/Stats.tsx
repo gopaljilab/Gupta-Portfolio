@@ -24,7 +24,7 @@ export function Stats() {
               <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">
                 {stat.value}
               </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-widest font-bold">
+<p className="text-xs text-slate-500 dark:text-slate-300 uppercase tracking-widest font-bold">
                 {stat.label}
               </p>
             </motion.div>

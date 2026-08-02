@@ -33,7 +33,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setDark((d) => !d)}
       aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-      className="rounded-full text-foreground hover:text-primary hover:bg-primary/10"
+className="rounded-full text-foreground hover:text-primary hover:bg-primary/10 min-w-[44px] min-h-[44px]"
     >
       {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </Button>

@@ -39,12 +39,12 @@ export function Education() {
             <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
               {item.degree}
             </h3>
-            <p className="text-lg text-slate-600 dark:text-slate-400 font-medium mb-6">
+<p className="text-lg text-slate-600 dark:text-slate-300 font-medium mb-6">
               {item.institution}
             </p>
             
             <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
-              <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-300 font-medium">
                 <Calendar className="w-4 h-4" />
                 <span>{item.period}</span>
               </div>

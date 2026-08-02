@@ -14,5 +14,5 @@ The portfolio is a static site (Contact form uses EmailJS directly in the browse
 - [x] Add Dark Mode toggle (ThemeToggle + theme-init script + dark CSS vars + dark: classes across all sections)
 - [x] Add GSAP animations (Hero word-by-word stagger + Projects ScrollTrigger reveal)
 - [x] Update favicon/apple-touch-icon + theme-color meta
-- [ ] Commit & push to GitHub so Vercel redeploys
+- [x] Commit & push to GitHub so Vercel redeploys (commit `600a579` → `origin/main`)
 
